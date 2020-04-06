@@ -60,6 +60,14 @@ export const athleteNameFilter = (arrAthletes, nombre) => {
 // funcion para filtrar los juegos olimpicos de verano e invierno
 export const seasonsFilter = {
   summerGamesFilter:() => {
-
+  const arrSummerGames = [];
+  Object.keys(arrSummer).forEach((key) =>{
+    if (arrSummer[key].disciplinas) {
+      const summerGames = arrSummer[key].disciplinas.filter(discip =>(discip.temporada === 'Summer'));
+      arrSummerGames.push({
+        season:
+      });
+    }
+  })
   },
 };

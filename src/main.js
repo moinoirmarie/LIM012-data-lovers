@@ -53,7 +53,16 @@ const showMedalists = (array) => {
   return athletesRow;
 };
 
-// 'estructura de fichaAtleta' es un ID del HTML
+// Estructura de id="winterGames"  
+const winterGames = document.getElementById('winterGames');
+const showWinterGames = (array) => {
+  let winterGamesRow = '';
+  array.forEach((season, index))
+
+
+};
+
+// Estructura de fichaAtleta' es un ID del HTML
 const athleteFile = document.getElementById('athleteFile');
 const showAthlete = (atleta) => {
   let athleteInfo = '';
@@ -136,10 +145,11 @@ const orderMedals = () => {
 };
 // Pantalla FICHA ATLETA
 const showAthleteScreen = (athleteNameFromList) => {
-  addClassPerId('medalsPage', 'hide');
   removeClassPerId('header', 'hide');
   removeClassPerId('athletePage', 'hide');
   addClassPerId('menu', 'hide');
+  addClassPerId('medalsPage', 'hide');
+  addClassPerId('seasonsPage','hide');
   // llamando a la funcion de data.js
   const atheleteNameMedalist = athleteNameFilter(medalistsResult, athleteNameFromList);
   athleteFile.innerHTML = showAthlete(atheleteNameMedalist);
@@ -156,6 +166,10 @@ const elementEventClic = () => {
 
 // Pantalla MEDALLAS
 const showMedalsScreen = () => {
+  removeClassPerId('header', 'hide');
+  removeClassPerId('medalsPage', 'hide');
+  addClassPerId('athletePage', 'hide');
+  addClassPerId('seasonsPage','hide');
   addClassPerId('menu', 'hide');
   // imprimiento el resultados de la fx, medalleros, en el HTML
   athletesList.innerHTML = showMedalists(mostMedals);
@@ -163,18 +177,48 @@ const showMedalsScreen = () => {
   // Ejecutar la funcion de ORDENAR luego de presionar el boton
   const orderButton = document.getElementById('btnOrder');
   orderButton.addEventListener('click', orderMedals);
-  removeClassPerId('header', 'hide');
-  removeClassPerId('medalsPage', 'hide');
-  addClassPerId('athletePage', 'hide');
 };
 
-// Ejecutar la funcion de para mostrar PAGE MEDALLAS
+// Ejecutar la funcion para mostrar la sección de medallas id="medalsPage" 
 const medalsButton = document.getElementById('btnMedals');
 const medalsButton1 = document.getElementById('btnMedals1');
 const medalsButton2 = document.getElementById('btnMedals2');
 medalsButton.addEventListener('click', showMedalsScreen);
 medalsButton1.addEventListener('click', showMedalsScreen);
 medalsButton2.addEventListener('click', showMedalsScreen);
+
+
+// Pantalla TEMPORADAS
+const showSeasonsScreen = () => {
+  removeClassPerId('header', 'hide');
+  removeClassPerId('seasonsPage', 'hide');
+  addClassPerId('athletePage', 'hide');
+  addClassPerId('medalsPage', 'hide');
+  addClassPerId('menu', 'hide');
+  //...
+  
+};
+
+/*const btnWinter = document.getElementById('btnWinter');
+btnWinter.addEventListener('click', showWinterGames);
+
+
+// Pantalla Juegos de Verano
+const showSummerGames = () => {
+  
+};
+
+const btnSummer = document.getElementById('btnSummer');
+btnSummer.addEventListener('click', showSummerGames);
+*/
+// Ejecurtar función para mostrar la sección de temporadas id="seasonsPage"
+const seasonsButton = document.getElementById('btnSeasons');
+const seasonsButton1 = document.getElementById('btnSeasons1');
+const seasonsButton2 = document.getElementById('btnSeasons2');
+seasonsButton.addEventListener('click', showSeasonsScreen);
+seasonsButton1.addEventListener('click', showSeasonsScreen);
+seasonsButton2.addEventListener('click', showSeasonsScreen);
+
 
 const backMedalist = () => {
   showMedalsScreen();

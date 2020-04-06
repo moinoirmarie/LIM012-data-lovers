@@ -1,30 +1,28 @@
-import { medalists, sortData, athleteNameFilter } from './data.js';
+import { medalists, sortData, athleteNameFilter } from '../src/data.js';
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('medalists', () => {
+  it('Es una función', () => {
+    expect(typeof medalists).toBe('function');
   });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it.skip('Debería retornar un `array`', () => {
+    expect(medalists()).toBe('array');
   });
 });
 
-
-describe('data', () => {
-  it('Es un objeto', () => {
-    expect(typeof data).toBe('object');
+describe('sortData', () => {
+  it('Es una función', () => {
+    expect(typeof sortData).toBe('function');
   });
-
-  describe('data.medalists', () => {
-    it('Es una función', () => {
-      expect(typeof data.medalists).toBe('function');
-    });
-  
-    it('Debería retornar `example`', () => {
-      expect(data.medalists()).toBe('example');
-    });
+  it.skip('Debería retornar un `array`', () => {
+    expect(medalists()).toBe('array');
   });
+});
 
+describe('athleteNameFilter', () => {
+  it('Es una función', () => {
+    expect(typeof athleteNameFilter).toBe('function');
+  });
+  it.skip('Debería retornar un `array`', () => {
+    expect(medalists()).toBe('array');
+  });
 });

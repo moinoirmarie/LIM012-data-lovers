@@ -53,6 +53,13 @@ export const sortData = (data, sortOrder) => {
 
 // funcion para filtrar por nombre el .athleteName proviene de medalist
 export const athleteNameFilter = (arrAthletes, nombre) => {
-  const objetoEncontrado = arrAthletes.filter(medallero => (medallero.athleteName === nombre))[0];
-  return objetoEncontrado;
+  const foundObject = arrAthletes.filter(medallero => (medallero.athleteName === nombre))[0];
+  return foundObject;
+};
+
+// funcion para filtrar los juegos olimpicos de verano e invierno
+export const seasonsFilter = {
+  summerGamesFilter:() => {
+
+  },
 };

@@ -310,6 +310,10 @@ main #medalsPage .medalsList .noc {
     grid-column: 1 / 3;
 }
 
+main #medalsPage .medalsList button {
+    border-bottom: 2px solid #333333;
+}
+
 
 main #medalsPage .medalsList {
     text-align: start;
@@ -881,7 +885,7 @@ header #header .logo button {
         display: none;
     }
 
-    main #medalsPage .medalsList h3:nth-last-child(1) {
+    main #medalsPage .medalsList .arrows {
         display: block;
         grid-column: 6 / 7;
         border-bottom: none;
@@ -912,6 +916,7 @@ header #header .logo button {
     main #medalsPage .list .total {
         grid-column: 5 / 7;   
     }
+
 
     main #medalsPage .list .total .totalMedals{
         padding-top: 12px;   

@@ -9,7 +9,6 @@ const medalistsResult = medalists(athletesData);
 // ordena de mayor a menor por # de medallas el arrayMedallas(-1 es de mayor a menor y 1 vicev)
 const mostMedals = sortData(medalistsResult, -1);
 
-
 // funcion que MUESTRA 10 atletas ordenados por numero de medallas en Lista
 // 'listaAtletas' es el ID del UL en el HTML
 const athletesList = document.getElementById('athletesList');
@@ -179,6 +178,7 @@ medalsButton2.addEventListener('click', showMedalsScreen);
 const backMedalist = () => {
   showMedalsScreen();
 };
+
 const backButton = document.getElementById('back');
 backButton.addEventListener('click', backMedalist);
 
